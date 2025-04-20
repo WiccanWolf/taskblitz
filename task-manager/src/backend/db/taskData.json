@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Buy groceries",
+    "description": "Pick up food for dinner",
+    "priority": 1,
+    "due": "TODAY"
+  },
+  {
+    "title": "Tidy",
+    "description": "Clean bedroom, clothes chest",
+    "priority": 3,
+    "due": "TODAY"
+  },
+  {
+    "title": "Water plants",
+    "description": "Make sure all house/garden plants are watered as weather heats up",
+    "priority": 4,
+    "due": "TODAY"
+  },
+  {
+    "title": "Portfolio",
+    "description": "Complete portfolio project (this one right here!)",
+    "priority": 5,
+    "due": "TODAY"
+  }
+]

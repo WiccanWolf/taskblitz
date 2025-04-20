@@ -1,0 +1,53 @@
+{
+  "name": "task-manager",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "listen.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "create-db": "psql -U root < src/backend/db/schema.sql",
+    "seed": "npm run create-db",
+    "start": "nodemon --exec babel-node --require dotenv/config src/index.js",
+    "seed-prod": "NODE_ENV=production npm run insert",
+    "insert": "psql -U root -d taskblitz < src/backend/db/seed.sql",
+    "update-supa": "PGPASSWORD=yj2jMr8Dxo1a3OAU psql -h aws-0-eu-west-2.pooler.supabase.com -U postgres.byptkdhuohdejphanekq -d postgres -p 6543 -f src/backend/db/seed.sql"
+  },
+  "dependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/register": "^7.25.9",
+    "@jwerre/minimist": "^2.1.2",
+    "@supabase/supabase-js": "^2.49.4",
+    "axios": "^1.8.4",
+    "babel": "^6.23.0",
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.14.1",
+    "postgres": "^3.4.5",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "nodemon": "^3.1.9",
+    "vite": "^6.2.0"
+  }
+}

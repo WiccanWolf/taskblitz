@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS taskblitz;
+CREATE DATABASE taskblitz;
+
